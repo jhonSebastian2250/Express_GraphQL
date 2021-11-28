@@ -8,11 +8,9 @@ const User = new Schema(
         surname: String,
         email: String,
         phone: String,
-        city: String,
+        city: String
     },
-    {
-        timesTamps: {createdAt: "created_at", 
-        updatedAt: "updated_at"}}
+    {timestamps: {createdAt: true, updatedAt: true}}
 );
 
 module.exports = {

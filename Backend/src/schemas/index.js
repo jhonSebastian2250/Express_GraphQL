@@ -5,7 +5,10 @@ const schemaComposer = new SchemaComposer();
 const {UserQuery, UserMutation} = require("./user")
 
 schemaComposer.Query.addFields({
-    ...UserQuery,
+    ...UserQuery
+})
+
+schemaComposer.Mutation.addFields({
     ...UserMutation
 })
 
