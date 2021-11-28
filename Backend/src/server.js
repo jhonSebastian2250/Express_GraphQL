@@ -5,13 +5,15 @@ const {graphqlHTTP} = require("express-graphql");
 
 const extensions = ({context}) => {
     return{
-        runtine : Date.now() - context.starTme,
+        runTine: Date.now() - context.starTime,
     }
 }
+
 
 app.listen(5000, async () => {
     console.log("working in the port 5000 http://localhost:5000/graphql")
     await mongoose.connect("mongodb://localhost:27017/GraphQlTest", {
+        
         useNewUrlParser : true,
         useUnifiedTopology : true
     })

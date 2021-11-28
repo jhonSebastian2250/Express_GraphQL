@@ -4,11 +4,13 @@ const Schema = mongoose.Schema;
 
 const User = new Schema(
     {
-        name: String,
-        surname: String,
         email: String,
-        phone: String,
-        city: String
+        ID: String,
+        nameSurname: String,
+        password: String,
+        userType: String,
+        state: String
+            
     },
     {timestamps: {createdAt: true, updatedAt: true}}
 );

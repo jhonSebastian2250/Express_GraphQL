@@ -9,11 +9,12 @@ const resolver = UserTC.addResolver({
 
     resolver: async({sourse, args}) => {
         let user = new UserSchema({
-            name: String,
-            surname: String,
             email: String,
-            phone: String,
-            city: String
+            identificacion: String,
+            nombreApellido: String,
+            contraseña: String,
+            tipoUsuario: String,
+            estado: String
 
         });
         return await user.save();
