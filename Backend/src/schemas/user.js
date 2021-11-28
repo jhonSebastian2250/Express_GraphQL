@@ -1,10 +1,14 @@
-const {UserTC} = require("/Backend/model/user")
+const {UserTC} = require("../model/user")
 
 const UserQuery = {
    userById: UserTC.getResolver("findById"),
-   userByIds: UserTC.getResolver("findBiIds"), 
+   userByIds: UserTC.getResolver("findByIds"), 
    userOne: UserTC.getResolver("findOne"),
    userMany: UserTC.getResolver("findMany"),
 };
 
-module.exports = {UserQuery};
+const UserMutation = {
+   userCreateOne: UserTC.getResolver("createOne"),
+};
+
+module.exports = {UserQuery, UserMutation};
