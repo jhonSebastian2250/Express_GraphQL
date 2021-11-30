@@ -12,7 +12,7 @@ const extensions = ({context}) => {
 
 app.listen(5000, async () => {
     console.log("working in the port 5000 http://localhost:5000/graphql")
-    await mongoose.connect("mongodb://localhost:27017/GraphQlTest", {
+    await mongoose.connect("mongodb+srv://jhonSebastian:jhonSebastian@cluster0.ecojz.mongodb.net/AdministrarProyectos?retryWrites=true&w=majority", {
         
         useNewUrlParser : true,
         useUnifiedTopology : true
